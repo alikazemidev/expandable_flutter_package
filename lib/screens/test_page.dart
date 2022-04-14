@@ -17,6 +17,9 @@ class _TestPageState extends State<TestPage> {
         child: Column(
           children: [
             ExpandablePanel(
+              theme: ExpandableThemeData(
+                hasIcon: false,
+              ),
               controller: ExpandableController(
                 initialExpanded: isActive,
               ),
