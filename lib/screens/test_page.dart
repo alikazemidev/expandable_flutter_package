@@ -53,7 +53,15 @@ class _TestPageState extends State<TestPage> {
                   isActive = !isActive;
                 });
               },
-              child: Text(isActive ? 'جمع کردن کارت ها' : 'مشاهده کارت ها'),
+              child: AnimatedContainer(
+                width: !isActive ? 300 : 100,
+                duration: Duration(milliseconds: 300),
+                curve: Curves.easeInCubic,
+                child: Text(
+                  isActive ? 'جمع کردن کارت ها' : 'مشاهده کارت ها',
+                  textAlign: TextAlign.center,
+                ),
+              ),
             )
           ],
         ),
